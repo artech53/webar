@@ -1,0 +1,15 @@
+<!-- Augmented Reality on the Web in 10 lines of html! https://github.com/jeromeetienne/ar.js -->
+<script src="aframe.min.js"></script>
+<script src="aframe-ar.js"></script>
+<!-- <script src='https://cdn.jsdelivr.net/npm/webvr-polyfill@latest/build/webvr-polyfill.js'></script> -->
+
+<body style='margin : 0px; overflow: hidden;'>
+
+	<a-scene embedded arjs='sourceType: webcam;'>
+		<a-marker type='pattern' url='rat.patt'>
+			<a-entity  scale="0.01 0.01 0.01" obj-model="obj: url(tinker.obj); mtl: url(obj.mtl)"> </a-entity>
+		</a-marker>
+
+		<a-entity camera></a-entity>
+	</a-scene>
+</body>
